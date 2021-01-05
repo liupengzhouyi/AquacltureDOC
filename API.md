@@ -23,6 +23,399 @@
 
 
 
+# 折旧维护数据管理
+
+
+## 添加折旧维护数据
+
+
+**接口地址**:`/depreciationMaintenance/addOne`
+
+
+**请求方式**:`POST`
+
+
+**请求数据类型**:`application/json`
+
+
+**响应数据类型**:`application/json;charset=UTF-8`
+
+
+**接口描述**:
+
+
+**请求示例**:
+
+
+```javascript
+{
+	"id": 0,
+	"newimg": "",
+	"ordimg": "",
+	"projectName": "",
+	"spending": {},
+	"why": ""
+}
+```
+
+
+**请求参数**:
+
+
+| 参数名称                | 参数说明                | in   | 是否必须 | 数据类型             | schema               |
+| ----------------------- | ----------------------- | ---- | -------- | -------------------- | -------------------- |
+| depreciationMaintenance | depreciationMaintenance | body | true     | 折旧维护数据库实体类 | 折旧维护数据库实体类 |
+| &emsp;&emsp;id          | 自增ID                  |      | false    | integer(int32)       |                      |
+| &emsp;&emsp;newimg      | 新照片                  |      | false    | string               |                      |
+| &emsp;&emsp;ordimg      | 旧照片                  |      | false    | string               |                      |
+| &emsp;&emsp;projectName | 项目名称                |      | false    | string               |                      |
+| &emsp;&emsp;spending    | 花费                    |      | false    | object               |                      |
+| &emsp;&emsp;why         | 维护原因                |      | false    | string               |                      |
+
+
+**响应状态**:
+
+
+| 状态码 | 说明         | schema               |
+| ------ | ------------ | -------------------- |
+| 200    | OK           | 折旧维护数据库实体类 |
+| 201    | Created      |                      |
+| 401    | Unauthorized |                      |
+| 403    | Forbidden    |                      |
+| 404    | Not Found    |                      |
+
+
+**响应参数**:
+
+
+| 参数名称    | 参数说明 | 类型           | schema         |
+| ----------- | -------- | -------------- | -------------- |
+| id          | 自增ID   | integer(int32) | integer(int32) |
+| newimg      | 新照片   | string         |                |
+| ordimg      | 旧照片   | string         |                |
+| projectName | 项目名称 | string         |                |
+| spending    | 花费     | object         |                |
+| why         | 维护原因 | string         |                |
+
+
+**响应示例**:
+```javascript
+{
+	"id": 0,
+	"newimg": "",
+	"ordimg": "",
+	"projectName": "",
+	"spending": {},
+	"why": ""
+}
+```
+
+
+## 通过ID删除折旧维护数据
+
+
+**接口地址**:`/depreciationMaintenance/deleteOne`
+
+
+**请求方式**:`POST`
+
+
+**请求数据类型**:`application/json`
+
+
+**响应数据类型**:`application/json;charset=UTF-8`
+
+
+**接口描述**:
+
+
+**请求示例**:
+
+
+```javascript
+{
+	"id": 0,
+	"newimg": "",
+	"ordimg": "",
+	"projectName": "",
+	"spending": {},
+	"why": ""
+}
+```
+
+
+**请求参数**:
+
+
+| 参数名称                | 参数说明                | in   | 是否必须 | 数据类型             | schema               |
+| ----------------------- | ----------------------- | ---- | -------- | -------------------- | -------------------- |
+| depreciationMaintenance | depreciationMaintenance | body | true     | 折旧维护数据库实体类 | 折旧维护数据库实体类 |
+| &emsp;&emsp;id          | 自增ID                  |      | false    | integer(int32)       |                      |
+| &emsp;&emsp;newimg      | 新照片                  |      | false    | string               |                      |
+| &emsp;&emsp;ordimg      | 旧照片                  |      | false    | string               |                      |
+| &emsp;&emsp;projectName | 项目名称                |      | false    | string               |                      |
+| &emsp;&emsp;spending    | 花费                    |      | false    | object               |                      |
+| &emsp;&emsp;why         | 维护原因                |      | false    | string               |                      |
+
+
+**响应状态**:
+
+
+| 状态码 | 说明         | schema |
+| ------ | ------------ | ------ |
+| 200    | OK           |        |
+| 201    | Created      |        |
+| 401    | Unauthorized |        |
+| 403    | Forbidden    |        |
+| 404    | Not Found    |        |
+
+
+**响应参数**:
+
+
+暂无
+
+
+**响应示例**:
+```javascript
+
+```
+
+
+## 查询全部折旧维护数据
+
+
+**接口地址**:`/depreciationMaintenance/queryAll`
+
+
+**请求方式**:`POST`
+
+
+**请求数据类型**:`application/json`
+
+
+**响应数据类型**:`application/json;charset=UTF-8`
+
+
+**接口描述**:
+
+
+**请求参数**:
+
+
+暂无
+
+
+**响应状态**:
+
+
+| 状态码 | 说明         | schema               |
+| ------ | ------------ | -------------------- |
+| 200    | OK           | 折旧维护数据库实体类 |
+| 201    | Created      |                      |
+| 401    | Unauthorized |                      |
+| 403    | Forbidden    |                      |
+| 404    | Not Found    |                      |
+
+
+**响应参数**:
+
+
+| 参数名称    | 参数说明 | 类型           | schema         |
+| ----------- | -------- | -------------- | -------------- |
+| id          | 自增ID   | integer(int32) | integer(int32) |
+| newimg      | 新照片   | string         |                |
+| ordimg      | 旧照片   | string         |                |
+| projectName | 项目名称 | string         |                |
+| spending    | 花费     | object         |                |
+| why         | 维护原因 | string         |                |
+
+
+**响应示例**:
+```javascript
+[
+	{
+		"id": 0,
+		"newimg": "",
+		"ordimg": "",
+		"projectName": "",
+		"spending": {},
+		"why": ""
+	}
+]
+```
+
+
+## 通过ID查询折旧维护数据
+
+
+**接口地址**:`/depreciationMaintenance/selectOne`
+
+
+**请求方式**:`POST`
+
+
+**请求数据类型**:`application/json`
+
+
+**响应数据类型**:`application/json;charset=UTF-8`
+
+
+**接口描述**:
+
+
+**请求示例**:
+
+
+```javascript
+{
+	"id": 0,
+	"newimg": "",
+	"ordimg": "",
+	"projectName": "",
+	"spending": {},
+	"why": ""
+}
+```
+
+
+**请求参数**:
+
+
+| 参数名称                | 参数说明                | in   | 是否必须 | 数据类型             | schema               |
+| ----------------------- | ----------------------- | ---- | -------- | -------------------- | -------------------- |
+| depreciationMaintenance | depreciationMaintenance | body | true     | 折旧维护数据库实体类 | 折旧维护数据库实体类 |
+| &emsp;&emsp;id          | 自增ID                  |      | false    | integer(int32)       |                      |
+| &emsp;&emsp;newimg      | 新照片                  |      | false    | string               |                      |
+| &emsp;&emsp;ordimg      | 旧照片                  |      | false    | string               |                      |
+| &emsp;&emsp;projectName | 项目名称                |      | false    | string               |                      |
+| &emsp;&emsp;spending    | 花费                    |      | false    | object               |                      |
+| &emsp;&emsp;why         | 维护原因                |      | false    | string               |                      |
+
+
+**响应状态**:
+
+
+| 状态码 | 说明         | schema               |
+| ------ | ------------ | -------------------- |
+| 200    | OK           | 折旧维护数据库实体类 |
+| 201    | Created      |                      |
+| 401    | Unauthorized |                      |
+| 403    | Forbidden    |                      |
+| 404    | Not Found    |                      |
+
+
+**响应参数**:
+
+
+| 参数名称    | 参数说明 | 类型           | schema         |
+| ----------- | -------- | -------------- | -------------- |
+| id          | 自增ID   | integer(int32) | integer(int32) |
+| newimg      | 新照片   | string         |                |
+| ordimg      | 旧照片   | string         |                |
+| projectName | 项目名称 | string         |                |
+| spending    | 花费     | object         |                |
+| why         | 维护原因 | string         |                |
+
+
+**响应示例**:
+```javascript
+{
+	"id": 0,
+	"newimg": "",
+	"ordimg": "",
+	"projectName": "",
+	"spending": {},
+	"why": ""
+}
+```
+
+
+## 更新信息
+
+
+**接口地址**:`/depreciationMaintenance/updateOne`
+
+
+**请求方式**:`POST`
+
+
+**请求数据类型**:`application/json`
+
+
+**响应数据类型**:`application/json;charset=UTF-8`
+
+
+**接口描述**:
+
+
+**请求示例**:
+
+
+```javascript
+{
+	"id": 0,
+	"newimg": "",
+	"ordimg": "",
+	"projectName": "",
+	"spending": {},
+	"why": ""
+}
+```
+
+
+**请求参数**:
+
+
+| 参数名称                | 参数说明                | in   | 是否必须 | 数据类型             | schema               |
+| ----------------------- | ----------------------- | ---- | -------- | -------------------- | -------------------- |
+| depreciationMaintenance | depreciationMaintenance | body | true     | 折旧维护数据库实体类 | 折旧维护数据库实体类 |
+| &emsp;&emsp;id          | 自增ID                  |      | false    | integer(int32)       |                      |
+| &emsp;&emsp;newimg      | 新照片                  |      | false    | string               |                      |
+| &emsp;&emsp;ordimg      | 旧照片                  |      | false    | string               |                      |
+| &emsp;&emsp;projectName | 项目名称                |      | false    | string               |                      |
+| &emsp;&emsp;spending    | 花费                    |      | false    | object               |                      |
+| &emsp;&emsp;why         | 维护原因                |      | false    | string               |                      |
+
+
+**响应状态**:
+
+
+| 状态码 | 说明         | schema               |
+| ------ | ------------ | -------------------- |
+| 200    | OK           | 折旧维护数据库实体类 |
+| 201    | Created      |                      |
+| 401    | Unauthorized |                      |
+| 403    | Forbidden    |                      |
+| 404    | Not Found    |                      |
+
+
+**响应参数**:
+
+
+| 参数名称    | 参数说明 | 类型           | schema         |
+| ----------- | -------- | -------------- | -------------- |
+| id          | 自增ID   | integer(int32) | integer(int32) |
+| newimg      | 新照片   | string         |                |
+| ordimg      | 旧照片   | string         |                |
+| projectName | 项目名称 | string         |                |
+| spending    | 花费     | object         |                |
+| why         | 维护原因 | string         |                |
+
+
+**响应示例**:
+```javascript
+{
+	"id": 0,
+	"newimg": "",
+	"ordimg": "",
+	"projectName": "",
+	"spending": {},
+	"why": ""
+}
+```
+
+
 # 员工管理
 
 
@@ -65,46 +458,46 @@
 **请求参数**:
 
 
-| 参数名称                   | 参数说明 | in   | 是否必须 | 数据类型          | schema |
-| -------------------------- | -------- | ---- | -------- | ----------------- | ------ |
-| staff                      | staff    | body | true     | Staff             | Staff  |
-| &emsp;&emsp;entryDate      |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;id             |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;idCardNumber   |          |      | false    | string            |        |
-| &emsp;&emsp;isSeparation   |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;name           |          |      | false    | string            |        |
-| &emsp;&emsp;phoneNumber    |          |      | false    | string            |        |
-| &emsp;&emsp;positionId     |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;separationDate |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;wage           |          |      | false    | number(double)    |        |
+| 参数名称                   | 参数说明   | in   | 是否必须 | 数据类型          | schema       |
+| -------------------------- | ---------- | ---- | -------- | ----------------- | ------------ |
+| staff                      | staff      | body | true     | 员工表实体类      | 员工表实体类 |
+| &emsp;&emsp;entryDate      | 入职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;id             | 自增ID     |      | false    | integer(int32)    |              |
+| &emsp;&emsp;idCardNumber   | 身份证号码 |      | false    | string            |              |
+| &emsp;&emsp;isSeparation   | 是否离职   |      | false    | integer(int32)    |              |
+| &emsp;&emsp;name           | 姓名       |      | false    | string            |              |
+| &emsp;&emsp;phoneNumber    | 联系方式   |      | false    | string            |              |
+| &emsp;&emsp;positionId     | 职位       |      | false    | integer(int32)    |              |
+| &emsp;&emsp;separationDate | 离职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;wage           | 工资       |      | false    | number(double)    |              |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema |
-| ------ | ------------ | ------ |
-| 200    | OK           | Staff  |
-| 201    | Created      |        |
-| 401    | Unauthorized |        |
-| 403    | Forbidden    |        |
-| 404    | Not Found    |        |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 员工表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
 
 
-| 参数名称       | 参数说明 | 类型              | schema            |
-| -------------- | -------- | ----------------- | ----------------- |
-| entryDate      |          | string(date-time) | string(date-time) |
-| id             |          | integer(int32)    | integer(int32)    |
-| idCardNumber   |          | string            |                   |
-| isSeparation   |          | integer(int32)    | integer(int32)    |
-| name           |          | string            |                   |
-| phoneNumber    |          | string            |                   |
-| positionId     |          | integer(int32)    | integer(int32)    |
-| separationDate |          | string(date-time) | string(date-time) |
-| wage           |          | number(double)    | number(double)    |
+| 参数名称       | 参数说明   | 类型              | schema            |
+| -------------- | ---------- | ----------------- | ----------------- |
+| entryDate      | 入职日期   | string(date-time) | string(date-time) |
+| id             | 自增ID     | integer(int32)    | integer(int32)    |
+| idCardNumber   | 身份证号码 | string            |                   |
+| isSeparation   | 是否离职   | integer(int32)    | integer(int32)    |
+| name           | 姓名       | string            |                   |
+| phoneNumber    | 联系方式   | string            |                   |
+| positionId     | 职位       | integer(int32)    | integer(int32)    |
+| separationDate | 离职日期   | string(date-time) | string(date-time) |
+| wage           | 工资       | number(double)    | number(double)    |
 
 
 **响应示例**:
@@ -162,18 +555,18 @@
 **请求参数**:
 
 
-| 参数名称                   | 参数说明 | in   | 是否必须 | 数据类型          | schema |
-| -------------------------- | -------- | ---- | -------- | ----------------- | ------ |
-| staff                      | staff    | body | true     | Staff             | Staff  |
-| &emsp;&emsp;entryDate      |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;id             |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;idCardNumber   |          |      | false    | string            |        |
-| &emsp;&emsp;isSeparation   |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;name           |          |      | false    | string            |        |
-| &emsp;&emsp;phoneNumber    |          |      | false    | string            |        |
-| &emsp;&emsp;positionId     |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;separationDate |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;wage           |          |      | false    | number(double)    |        |
+| 参数名称                   | 参数说明   | in   | 是否必须 | 数据类型          | schema       |
+| -------------------------- | ---------- | ---- | -------- | ----------------- | ------------ |
+| staff                      | staff      | body | true     | 员工表实体类      | 员工表实体类 |
+| &emsp;&emsp;entryDate      | 入职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;id             | 自增ID     |      | false    | integer(int32)    |              |
+| &emsp;&emsp;idCardNumber   | 身份证号码 |      | false    | string            |              |
+| &emsp;&emsp;isSeparation   | 是否离职   |      | false    | integer(int32)    |              |
+| &emsp;&emsp;name           | 姓名       |      | false    | string            |              |
+| &emsp;&emsp;phoneNumber    | 联系方式   |      | false    | string            |              |
+| &emsp;&emsp;positionId     | 职位       |      | false    | integer(int32)    |              |
+| &emsp;&emsp;separationDate | 离职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;wage           | 工资       |      | false    | number(double)    |              |
 
 
 **响应状态**:
@@ -239,46 +632,46 @@
 **请求参数**:
 
 
-| 参数名称                   | 参数说明 | in   | 是否必须 | 数据类型          | schema |
-| -------------------------- | -------- | ---- | -------- | ----------------- | ------ |
-| staff                      | staff    | body | true     | Staff             | Staff  |
-| &emsp;&emsp;entryDate      |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;id             |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;idCardNumber   |          |      | false    | string            |        |
-| &emsp;&emsp;isSeparation   |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;name           |          |      | false    | string            |        |
-| &emsp;&emsp;phoneNumber    |          |      | false    | string            |        |
-| &emsp;&emsp;positionId     |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;separationDate |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;wage           |          |      | false    | number(double)    |        |
+| 参数名称                   | 参数说明   | in   | 是否必须 | 数据类型          | schema       |
+| -------------------------- | ---------- | ---- | -------- | ----------------- | ------------ |
+| staff                      | staff      | body | true     | 员工表实体类      | 员工表实体类 |
+| &emsp;&emsp;entryDate      | 入职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;id             | 自增ID     |      | false    | integer(int32)    |              |
+| &emsp;&emsp;idCardNumber   | 身份证号码 |      | false    | string            |              |
+| &emsp;&emsp;isSeparation   | 是否离职   |      | false    | integer(int32)    |              |
+| &emsp;&emsp;name           | 姓名       |      | false    | string            |              |
+| &emsp;&emsp;phoneNumber    | 联系方式   |      | false    | string            |              |
+| &emsp;&emsp;positionId     | 职位       |      | false    | integer(int32)    |              |
+| &emsp;&emsp;separationDate | 离职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;wage           | 工资       |      | false    | number(double)    |              |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema |
-| ------ | ------------ | ------ |
-| 200    | OK           | Staff  |
-| 201    | Created      |        |
-| 401    | Unauthorized |        |
-| 403    | Forbidden    |        |
-| 404    | Not Found    |        |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 员工表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
 
 
-| 参数名称       | 参数说明 | 类型              | schema            |
-| -------------- | -------- | ----------------- | ----------------- |
-| entryDate      |          | string(date-time) | string(date-time) |
-| id             |          | integer(int32)    | integer(int32)    |
-| idCardNumber   |          | string            |                   |
-| isSeparation   |          | integer(int32)    | integer(int32)    |
-| name           |          | string            |                   |
-| phoneNumber    |          | string            |                   |
-| positionId     |          | integer(int32)    | integer(int32)    |
-| separationDate |          | string(date-time) | string(date-time) |
-| wage           |          | number(double)    | number(double)    |
+| 参数名称       | 参数说明   | 类型              | schema            |
+| -------------- | ---------- | ----------------- | ----------------- |
+| entryDate      | 入职日期   | string(date-time) | string(date-time) |
+| id             | 自增ID     | integer(int32)    | integer(int32)    |
+| idCardNumber   | 身份证号码 | string            |                   |
+| isSeparation   | 是否离职   | integer(int32)    | integer(int32)    |
+| name           | 姓名       | string            |                   |
+| phoneNumber    | 联系方式   | string            |                   |
+| positionId     | 职位       | integer(int32)    | integer(int32)    |
+| separationDate | 离职日期   | string(date-time) | string(date-time) |
+| wage           | 工资       | number(double)    | number(double)    |
 
 
 **响应示例**:
@@ -324,29 +717,29 @@
 **响应状态**:
 
 
-| 状态码 | 说明         | schema |
-| ------ | ------------ | ------ |
-| 200    | OK           | Staff  |
-| 201    | Created      |        |
-| 401    | Unauthorized |        |
-| 403    | Forbidden    |        |
-| 404    | Not Found    |        |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 员工表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
 
 
-| 参数名称       | 参数说明 | 类型              | schema            |
-| -------------- | -------- | ----------------- | ----------------- |
-| entryDate      |          | string(date-time) | string(date-time) |
-| id             |          | integer(int32)    | integer(int32)    |
-| idCardNumber   |          | string            |                   |
-| isSeparation   |          | integer(int32)    | integer(int32)    |
-| name           |          | string            |                   |
-| phoneNumber    |          | string            |                   |
-| positionId     |          | integer(int32)    | integer(int32)    |
-| separationDate |          | string(date-time) | string(date-time) |
-| wage           |          | number(double)    | number(double)    |
+| 参数名称       | 参数说明   | 类型              | schema            |
+| -------------- | ---------- | ----------------- | ----------------- |
+| entryDate      | 入职日期   | string(date-time) | string(date-time) |
+| id             | 自增ID     | integer(int32)    | integer(int32)    |
+| idCardNumber   | 身份证号码 | string            |                   |
+| isSeparation   | 是否离职   | integer(int32)    | integer(int32)    |
+| name           | 姓名       | string            |                   |
+| phoneNumber    | 联系方式   | string            |                   |
+| positionId     | 职位       | integer(int32)    | integer(int32)    |
+| separationDate | 离职日期   | string(date-time) | string(date-time) |
+| wage           | 工资       | number(double)    | number(double)    |
 
 
 **响应示例**:
@@ -406,46 +799,46 @@
 **请求参数**:
 
 
-| 参数名称                   | 参数说明 | in   | 是否必须 | 数据类型          | schema |
-| -------------------------- | -------- | ---- | -------- | ----------------- | ------ |
-| staff                      | staff    | body | true     | Staff             | Staff  |
-| &emsp;&emsp;entryDate      |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;id             |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;idCardNumber   |          |      | false    | string            |        |
-| &emsp;&emsp;isSeparation   |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;name           |          |      | false    | string            |        |
-| &emsp;&emsp;phoneNumber    |          |      | false    | string            |        |
-| &emsp;&emsp;positionId     |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;separationDate |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;wage           |          |      | false    | number(double)    |        |
+| 参数名称                   | 参数说明   | in   | 是否必须 | 数据类型          | schema       |
+| -------------------------- | ---------- | ---- | -------- | ----------------- | ------------ |
+| staff                      | staff      | body | true     | 员工表实体类      | 员工表实体类 |
+| &emsp;&emsp;entryDate      | 入职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;id             | 自增ID     |      | false    | integer(int32)    |              |
+| &emsp;&emsp;idCardNumber   | 身份证号码 |      | false    | string            |              |
+| &emsp;&emsp;isSeparation   | 是否离职   |      | false    | integer(int32)    |              |
+| &emsp;&emsp;name           | 姓名       |      | false    | string            |              |
+| &emsp;&emsp;phoneNumber    | 联系方式   |      | false    | string            |              |
+| &emsp;&emsp;positionId     | 职位       |      | false    | integer(int32)    |              |
+| &emsp;&emsp;separationDate | 离职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;wage           | 工资       |      | false    | number(double)    |              |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema |
-| ------ | ------------ | ------ |
-| 200    | OK           | Staff  |
-| 201    | Created      |        |
-| 401    | Unauthorized |        |
-| 403    | Forbidden    |        |
-| 404    | Not Found    |        |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 员工表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
 
 
-| 参数名称       | 参数说明 | 类型              | schema            |
-| -------------- | -------- | ----------------- | ----------------- |
-| entryDate      |          | string(date-time) | string(date-time) |
-| id             |          | integer(int32)    | integer(int32)    |
-| idCardNumber   |          | string            |                   |
-| isSeparation   |          | integer(int32)    | integer(int32)    |
-| name           |          | string            |                   |
-| phoneNumber    |          | string            |                   |
-| positionId     |          | integer(int32)    | integer(int32)    |
-| separationDate |          | string(date-time) | string(date-time) |
-| wage           |          | number(double)    | number(double)    |
+| 参数名称       | 参数说明   | 类型              | schema            |
+| -------------- | ---------- | ----------------- | ----------------- |
+| entryDate      | 入职日期   | string(date-time) | string(date-time) |
+| id             | 自增ID     | integer(int32)    | integer(int32)    |
+| idCardNumber   | 身份证号码 | string            |                   |
+| isSeparation   | 是否离职   | integer(int32)    | integer(int32)    |
+| name           | 姓名       | string            |                   |
+| phoneNumber    | 联系方式   | string            |                   |
+| positionId     | 职位       | integer(int32)    | integer(int32)    |
+| separationDate | 离职日期   | string(date-time) | string(date-time) |
+| wage           | 工资       | number(double)    | number(double)    |
 
 
 **响应示例**:
@@ -505,46 +898,46 @@
 **请求参数**:
 
 
-| 参数名称                   | 参数说明 | in   | 是否必须 | 数据类型          | schema |
-| -------------------------- | -------- | ---- | -------- | ----------------- | ------ |
-| staff                      | staff    | body | true     | Staff             | Staff  |
-| &emsp;&emsp;entryDate      |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;id             |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;idCardNumber   |          |      | false    | string            |        |
-| &emsp;&emsp;isSeparation   |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;name           |          |      | false    | string            |        |
-| &emsp;&emsp;phoneNumber    |          |      | false    | string            |        |
-| &emsp;&emsp;positionId     |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;separationDate |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;wage           |          |      | false    | number(double)    |        |
+| 参数名称                   | 参数说明   | in   | 是否必须 | 数据类型          | schema       |
+| -------------------------- | ---------- | ---- | -------- | ----------------- | ------------ |
+| staff                      | staff      | body | true     | 员工表实体类      | 员工表实体类 |
+| &emsp;&emsp;entryDate      | 入职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;id             | 自增ID     |      | false    | integer(int32)    |              |
+| &emsp;&emsp;idCardNumber   | 身份证号码 |      | false    | string            |              |
+| &emsp;&emsp;isSeparation   | 是否离职   |      | false    | integer(int32)    |              |
+| &emsp;&emsp;name           | 姓名       |      | false    | string            |              |
+| &emsp;&emsp;phoneNumber    | 联系方式   |      | false    | string            |              |
+| &emsp;&emsp;positionId     | 职位       |      | false    | integer(int32)    |              |
+| &emsp;&emsp;separationDate | 离职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;wage           | 工资       |      | false    | number(double)    |              |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema |
-| ------ | ------------ | ------ |
-| 200    | OK           | Staff  |
-| 201    | Created      |        |
-| 401    | Unauthorized |        |
-| 403    | Forbidden    |        |
-| 404    | Not Found    |        |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 员工表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
 
 
-| 参数名称       | 参数说明 | 类型              | schema            |
-| -------------- | -------- | ----------------- | ----------------- |
-| entryDate      |          | string(date-time) | string(date-time) |
-| id             |          | integer(int32)    | integer(int32)    |
-| idCardNumber   |          | string            |                   |
-| isSeparation   |          | integer(int32)    | integer(int32)    |
-| name           |          | string            |                   |
-| phoneNumber    |          | string            |                   |
-| positionId     |          | integer(int32)    | integer(int32)    |
-| separationDate |          | string(date-time) | string(date-time) |
-| wage           |          | number(double)    | number(double)    |
+| 参数名称       | 参数说明   | 类型              | schema            |
+| -------------- | ---------- | ----------------- | ----------------- |
+| entryDate      | 入职日期   | string(date-time) | string(date-time) |
+| id             | 自增ID     | integer(int32)    | integer(int32)    |
+| idCardNumber   | 身份证号码 | string            |                   |
+| isSeparation   | 是否离职   | integer(int32)    | integer(int32)    |
+| name           | 姓名       | string            |                   |
+| phoneNumber    | 联系方式   | string            |                   |
+| positionId     | 职位       | integer(int32)    | integer(int32)    |
+| separationDate | 离职日期   | string(date-time) | string(date-time) |
+| wage           | 工资       | number(double)    | number(double)    |
 
 
 **响应示例**:
@@ -604,46 +997,46 @@
 **请求参数**:
 
 
-| 参数名称                   | 参数说明 | in   | 是否必须 | 数据类型          | schema |
-| -------------------------- | -------- | ---- | -------- | ----------------- | ------ |
-| staff                      | staff    | body | true     | Staff             | Staff  |
-| &emsp;&emsp;entryDate      |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;id             |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;idCardNumber   |          |      | false    | string            |        |
-| &emsp;&emsp;isSeparation   |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;name           |          |      | false    | string            |        |
-| &emsp;&emsp;phoneNumber    |          |      | false    | string            |        |
-| &emsp;&emsp;positionId     |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;separationDate |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;wage           |          |      | false    | number(double)    |        |
+| 参数名称                   | 参数说明   | in   | 是否必须 | 数据类型          | schema       |
+| -------------------------- | ---------- | ---- | -------- | ----------------- | ------------ |
+| staff                      | staff      | body | true     | 员工表实体类      | 员工表实体类 |
+| &emsp;&emsp;entryDate      | 入职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;id             | 自增ID     |      | false    | integer(int32)    |              |
+| &emsp;&emsp;idCardNumber   | 身份证号码 |      | false    | string            |              |
+| &emsp;&emsp;isSeparation   | 是否离职   |      | false    | integer(int32)    |              |
+| &emsp;&emsp;name           | 姓名       |      | false    | string            |              |
+| &emsp;&emsp;phoneNumber    | 联系方式   |      | false    | string            |              |
+| &emsp;&emsp;positionId     | 职位       |      | false    | integer(int32)    |              |
+| &emsp;&emsp;separationDate | 离职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;wage           | 工资       |      | false    | number(double)    |              |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema |
-| ------ | ------------ | ------ |
-| 200    | OK           | Staff  |
-| 201    | Created      |        |
-| 401    | Unauthorized |        |
-| 403    | Forbidden    |        |
-| 404    | Not Found    |        |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 员工表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
 
 
-| 参数名称       | 参数说明 | 类型              | schema            |
-| -------------- | -------- | ----------------- | ----------------- |
-| entryDate      |          | string(date-time) | string(date-time) |
-| id             |          | integer(int32)    | integer(int32)    |
-| idCardNumber   |          | string            |                   |
-| isSeparation   |          | integer(int32)    | integer(int32)    |
-| name           |          | string            |                   |
-| phoneNumber    |          | string            |                   |
-| positionId     |          | integer(int32)    | integer(int32)    |
-| separationDate |          | string(date-time) | string(date-time) |
-| wage           |          | number(double)    | number(double)    |
+| 参数名称       | 参数说明   | 类型              | schema            |
+| -------------- | ---------- | ----------------- | ----------------- |
+| entryDate      | 入职日期   | string(date-time) | string(date-time) |
+| id             | 自增ID     | integer(int32)    | integer(int32)    |
+| idCardNumber   | 身份证号码 | string            |                   |
+| isSeparation   | 是否离职   | integer(int32)    | integer(int32)    |
+| name           | 姓名       | string            |                   |
+| phoneNumber    | 联系方式   | string            |                   |
+| positionId     | 职位       | integer(int32)    | integer(int32)    |
+| separationDate | 离职日期   | string(date-time) | string(date-time) |
+| wage           | 工资       | number(double)    | number(double)    |
 
 
 **响应示例**:
@@ -703,46 +1096,46 @@
 **请求参数**:
 
 
-| 参数名称                   | 参数说明 | in   | 是否必须 | 数据类型          | schema |
-| -------------------------- | -------- | ---- | -------- | ----------------- | ------ |
-| staff                      | staff    | body | true     | Staff             | Staff  |
-| &emsp;&emsp;entryDate      |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;id             |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;idCardNumber   |          |      | false    | string            |        |
-| &emsp;&emsp;isSeparation   |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;name           |          |      | false    | string            |        |
-| &emsp;&emsp;phoneNumber    |          |      | false    | string            |        |
-| &emsp;&emsp;positionId     |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;separationDate |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;wage           |          |      | false    | number(double)    |        |
+| 参数名称                   | 参数说明   | in   | 是否必须 | 数据类型          | schema       |
+| -------------------------- | ---------- | ---- | -------- | ----------------- | ------------ |
+| staff                      | staff      | body | true     | 员工表实体类      | 员工表实体类 |
+| &emsp;&emsp;entryDate      | 入职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;id             | 自增ID     |      | false    | integer(int32)    |              |
+| &emsp;&emsp;idCardNumber   | 身份证号码 |      | false    | string            |              |
+| &emsp;&emsp;isSeparation   | 是否离职   |      | false    | integer(int32)    |              |
+| &emsp;&emsp;name           | 姓名       |      | false    | string            |              |
+| &emsp;&emsp;phoneNumber    | 联系方式   |      | false    | string            |              |
+| &emsp;&emsp;positionId     | 职位       |      | false    | integer(int32)    |              |
+| &emsp;&emsp;separationDate | 离职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;wage           | 工资       |      | false    | number(double)    |              |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema |
-| ------ | ------------ | ------ |
-| 200    | OK           | Staff  |
-| 201    | Created      |        |
-| 401    | Unauthorized |        |
-| 403    | Forbidden    |        |
-| 404    | Not Found    |        |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 员工表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
 
 
-| 参数名称       | 参数说明 | 类型              | schema            |
-| -------------- | -------- | ----------------- | ----------------- |
-| entryDate      |          | string(date-time) | string(date-time) |
-| id             |          | integer(int32)    | integer(int32)    |
-| idCardNumber   |          | string            |                   |
-| isSeparation   |          | integer(int32)    | integer(int32)    |
-| name           |          | string            |                   |
-| phoneNumber    |          | string            |                   |
-| positionId     |          | integer(int32)    | integer(int32)    |
-| separationDate |          | string(date-time) | string(date-time) |
-| wage           |          | number(double)    | number(double)    |
+| 参数名称       | 参数说明   | 类型              | schema            |
+| -------------- | ---------- | ----------------- | ----------------- |
+| entryDate      | 入职日期   | string(date-time) | string(date-time) |
+| id             | 自增ID     | integer(int32)    | integer(int32)    |
+| idCardNumber   | 身份证号码 | string            |                   |
+| isSeparation   | 是否离职   | integer(int32)    | integer(int32)    |
+| name           | 姓名       | string            |                   |
+| phoneNumber    | 联系方式   | string            |                   |
+| positionId     | 职位       | integer(int32)    | integer(int32)    |
+| separationDate | 离职日期   | string(date-time) | string(date-time) |
+| wage           | 工资       | number(double)    | number(double)    |
 
 
 **响应示例**:
@@ -802,46 +1195,46 @@
 **请求参数**:
 
 
-| 参数名称                   | 参数说明 | in   | 是否必须 | 数据类型          | schema |
-| -------------------------- | -------- | ---- | -------- | ----------------- | ------ |
-| staff                      | staff    | body | true     | Staff             | Staff  |
-| &emsp;&emsp;entryDate      |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;id             |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;idCardNumber   |          |      | false    | string            |        |
-| &emsp;&emsp;isSeparation   |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;name           |          |      | false    | string            |        |
-| &emsp;&emsp;phoneNumber    |          |      | false    | string            |        |
-| &emsp;&emsp;positionId     |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;separationDate |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;wage           |          |      | false    | number(double)    |        |
+| 参数名称                   | 参数说明   | in   | 是否必须 | 数据类型          | schema       |
+| -------------------------- | ---------- | ---- | -------- | ----------------- | ------------ |
+| staff                      | staff      | body | true     | 员工表实体类      | 员工表实体类 |
+| &emsp;&emsp;entryDate      | 入职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;id             | 自增ID     |      | false    | integer(int32)    |              |
+| &emsp;&emsp;idCardNumber   | 身份证号码 |      | false    | string            |              |
+| &emsp;&emsp;isSeparation   | 是否离职   |      | false    | integer(int32)    |              |
+| &emsp;&emsp;name           | 姓名       |      | false    | string            |              |
+| &emsp;&emsp;phoneNumber    | 联系方式   |      | false    | string            |              |
+| &emsp;&emsp;positionId     | 职位       |      | false    | integer(int32)    |              |
+| &emsp;&emsp;separationDate | 离职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;wage           | 工资       |      | false    | number(double)    |              |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema |
-| ------ | ------------ | ------ |
-| 200    | OK           | Staff  |
-| 201    | Created      |        |
-| 401    | Unauthorized |        |
-| 403    | Forbidden    |        |
-| 404    | Not Found    |        |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 员工表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
 
 
-| 参数名称       | 参数说明 | 类型              | schema            |
-| -------------- | -------- | ----------------- | ----------------- |
-| entryDate      |          | string(date-time) | string(date-time) |
-| id             |          | integer(int32)    | integer(int32)    |
-| idCardNumber   |          | string            |                   |
-| isSeparation   |          | integer(int32)    | integer(int32)    |
-| name           |          | string            |                   |
-| phoneNumber    |          | string            |                   |
-| positionId     |          | integer(int32)    | integer(int32)    |
-| separationDate |          | string(date-time) | string(date-time) |
-| wage           |          | number(double)    | number(double)    |
+| 参数名称       | 参数说明   | 类型              | schema            |
+| -------------- | ---------- | ----------------- | ----------------- |
+| entryDate      | 入职日期   | string(date-time) | string(date-time) |
+| id             | 自增ID     | integer(int32)    | integer(int32)    |
+| idCardNumber   | 身份证号码 | string            |                   |
+| isSeparation   | 是否离职   | integer(int32)    | integer(int32)    |
+| name           | 姓名       | string            |                   |
+| phoneNumber    | 联系方式   | string            |                   |
+| positionId     | 职位       | integer(int32)    | integer(int32)    |
+| separationDate | 离职日期   | string(date-time) | string(date-time) |
+| wage           | 工资       | number(double)    | number(double)    |
 
 
 **响应示例**:
@@ -901,46 +1294,46 @@
 **请求参数**:
 
 
-| 参数名称                   | 参数说明 | in   | 是否必须 | 数据类型          | schema |
-| -------------------------- | -------- | ---- | -------- | ----------------- | ------ |
-| staff                      | staff    | body | true     | Staff             | Staff  |
-| &emsp;&emsp;entryDate      |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;id             |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;idCardNumber   |          |      | false    | string            |        |
-| &emsp;&emsp;isSeparation   |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;name           |          |      | false    | string            |        |
-| &emsp;&emsp;phoneNumber    |          |      | false    | string            |        |
-| &emsp;&emsp;positionId     |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;separationDate |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;wage           |          |      | false    | number(double)    |        |
+| 参数名称                   | 参数说明   | in   | 是否必须 | 数据类型          | schema       |
+| -------------------------- | ---------- | ---- | -------- | ----------------- | ------------ |
+| staff                      | staff      | body | true     | 员工表实体类      | 员工表实体类 |
+| &emsp;&emsp;entryDate      | 入职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;id             | 自增ID     |      | false    | integer(int32)    |              |
+| &emsp;&emsp;idCardNumber   | 身份证号码 |      | false    | string            |              |
+| &emsp;&emsp;isSeparation   | 是否离职   |      | false    | integer(int32)    |              |
+| &emsp;&emsp;name           | 姓名       |      | false    | string            |              |
+| &emsp;&emsp;phoneNumber    | 联系方式   |      | false    | string            |              |
+| &emsp;&emsp;positionId     | 职位       |      | false    | integer(int32)    |              |
+| &emsp;&emsp;separationDate | 离职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;wage           | 工资       |      | false    | number(double)    |              |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema |
-| ------ | ------------ | ------ |
-| 200    | OK           | Staff  |
-| 201    | Created      |        |
-| 401    | Unauthorized |        |
-| 403    | Forbidden    |        |
-| 404    | Not Found    |        |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 员工表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
 
 
-| 参数名称       | 参数说明 | 类型              | schema            |
-| -------------- | -------- | ----------------- | ----------------- |
-| entryDate      |          | string(date-time) | string(date-time) |
-| id             |          | integer(int32)    | integer(int32)    |
-| idCardNumber   |          | string            |                   |
-| isSeparation   |          | integer(int32)    | integer(int32)    |
-| name           |          | string            |                   |
-| phoneNumber    |          | string            |                   |
-| positionId     |          | integer(int32)    | integer(int32)    |
-| separationDate |          | string(date-time) | string(date-time) |
-| wage           |          | number(double)    | number(double)    |
+| 参数名称       | 参数说明   | 类型              | schema            |
+| -------------- | ---------- | ----------------- | ----------------- |
+| entryDate      | 入职日期   | string(date-time) | string(date-time) |
+| id             | 自增ID     | integer(int32)    | integer(int32)    |
+| idCardNumber   | 身份证号码 | string            |                   |
+| isSeparation   | 是否离职   | integer(int32)    | integer(int32)    |
+| name           | 姓名       | string            |                   |
+| phoneNumber    | 联系方式   | string            |                   |
+| positionId     | 职位       | integer(int32)    | integer(int32)    |
+| separationDate | 离职日期   | string(date-time) | string(date-time) |
+| wage           | 工资       | number(double)    | number(double)    |
 
 
 **响应示例**:
@@ -998,46 +1391,46 @@
 **请求参数**:
 
 
-| 参数名称                   | 参数说明 | in   | 是否必须 | 数据类型          | schema |
-| -------------------------- | -------- | ---- | -------- | ----------------- | ------ |
-| staff                      | staff    | body | true     | Staff             | Staff  |
-| &emsp;&emsp;entryDate      |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;id             |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;idCardNumber   |          |      | false    | string            |        |
-| &emsp;&emsp;isSeparation   |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;name           |          |      | false    | string            |        |
-| &emsp;&emsp;phoneNumber    |          |      | false    | string            |        |
-| &emsp;&emsp;positionId     |          |      | false    | integer(int32)    |        |
-| &emsp;&emsp;separationDate |          |      | false    | string(date-time) |        |
-| &emsp;&emsp;wage           |          |      | false    | number(double)    |        |
+| 参数名称                   | 参数说明   | in   | 是否必须 | 数据类型          | schema       |
+| -------------------------- | ---------- | ---- | -------- | ----------------- | ------------ |
+| staff                      | staff      | body | true     | 员工表实体类      | 员工表实体类 |
+| &emsp;&emsp;entryDate      | 入职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;id             | 自增ID     |      | false    | integer(int32)    |              |
+| &emsp;&emsp;idCardNumber   | 身份证号码 |      | false    | string            |              |
+| &emsp;&emsp;isSeparation   | 是否离职   |      | false    | integer(int32)    |              |
+| &emsp;&emsp;name           | 姓名       |      | false    | string            |              |
+| &emsp;&emsp;phoneNumber    | 联系方式   |      | false    | string            |              |
+| &emsp;&emsp;positionId     | 职位       |      | false    | integer(int32)    |              |
+| &emsp;&emsp;separationDate | 离职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;wage           | 工资       |      | false    | number(double)    |              |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema |
-| ------ | ------------ | ------ |
-| 200    | OK           | Staff  |
-| 201    | Created      |        |
-| 401    | Unauthorized |        |
-| 403    | Forbidden    |        |
-| 404    | Not Found    |        |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 员工表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
 
 
-| 参数名称       | 参数说明 | 类型              | schema            |
-| -------------- | -------- | ----------------- | ----------------- |
-| entryDate      |          | string(date-time) | string(date-time) |
-| id             |          | integer(int32)    | integer(int32)    |
-| idCardNumber   |          | string            |                   |
-| isSeparation   |          | integer(int32)    | integer(int32)    |
-| name           |          | string            |                   |
-| phoneNumber    |          | string            |                   |
-| positionId     |          | integer(int32)    | integer(int32)    |
-| separationDate |          | string(date-time) | string(date-time) |
-| wage           |          | number(double)    | number(double)    |
+| 参数名称       | 参数说明   | 类型              | schema            |
+| -------------- | ---------- | ----------------- | ----------------- |
+| entryDate      | 入职日期   | string(date-time) | string(date-time) |
+| id             | 自增ID     | integer(int32)    | integer(int32)    |
+| idCardNumber   | 身份证号码 | string            |                   |
+| isSeparation   | 是否离职   | integer(int32)    | integer(int32)    |
+| name           | 姓名       | string            |                   |
+| phoneNumber    | 联系方式   | string            |                   |
+| positionId     | 职位       | integer(int32)    | integer(int32)    |
+| separationDate | 离职日期   | string(date-time) | string(date-time) |
+| wage           | 工资       | number(double)    | number(double)    |
 
 
 **响应示例**:
@@ -1054,6 +1447,7 @@
 	"wage": 0
 }
 ```
+
 
 # 职位管理
 
@@ -1091,24 +1485,24 @@
 **请求参数**:
 
 
-| 参数名称                        | 参数说明 | in   | 是否必须 | 数据类型       | schema   |
-| ------------------------------- | -------- | ---- | -------- | -------------- | -------- |
-| position                        | position | body | true     | Position       | Position |
-| &emsp;&emsp;descriptionPosition |          |      | false    | string         |          |
-| &emsp;&emsp;position            |          |      | false    | string         |          |
-| &emsp;&emsp;positionid          |          |      | false    | integer(int32) |          |
+| 参数名称                        | 参数说明 | in   | 是否必须 | 数据类型       | schema       |
+| ------------------------------- | -------- | ---- | -------- | -------------- | ------------ |
+| position                        | position | body | true     | 职位表实体类   | 职位表实体类 |
+| &emsp;&emsp;descriptionPosition | 职位描述 |      | false    | string         |              |
+| &emsp;&emsp;position            | 职位名称 |      | false    | string         |              |
+| &emsp;&emsp;positionid          | 自增ID   |      | false    | integer(int32) |              |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema   |
-| ------ | ------------ | -------- |
-| 200    | OK           | Position |
-| 201    | Created      |          |
-| 401    | Unauthorized |          |
-| 403    | Forbidden    |          |
-| 404    | Not Found    |          |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 职位表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
@@ -1116,9 +1510,9 @@
 
 | 参数名称            | 参数说明 | 类型           | schema         |
 | ------------------- | -------- | -------------- | -------------- |
-| descriptionPosition |          | string         |                |
-| position            |          | string         |                |
-| positionid          |          | integer(int32) | integer(int32) |
+| descriptionPosition | 职位描述 | string         |                |
+| position            | 职位名称 | string         |                |
+| positionid          | 自增ID   | integer(int32) | integer(int32) |
 
 
 **响应示例**:
@@ -1164,12 +1558,12 @@
 **请求参数**:
 
 
-| 参数名称                        | 参数说明 | in   | 是否必须 | 数据类型       | schema   |
-| ------------------------------- | -------- | ---- | -------- | -------------- | -------- |
-| position                        | position | body | true     | Position       | Position |
-| &emsp;&emsp;descriptionPosition |          |      | false    | string         |          |
-| &emsp;&emsp;position            |          |      | false    | string         |          |
-| &emsp;&emsp;positionid          |          |      | false    | integer(int32) |          |
+| 参数名称                        | 参数说明 | in   | 是否必须 | 数据类型       | schema       |
+| ------------------------------- | -------- | ---- | -------- | -------------- | ------------ |
+| position                        | position | body | true     | 职位表实体类   | 职位表实体类 |
+| &emsp;&emsp;descriptionPosition | 职位描述 |      | false    | string         |              |
+| &emsp;&emsp;position            | 职位名称 |      | false    | string         |              |
+| &emsp;&emsp;positionid          | 自增ID   |      | false    | integer(int32) |              |
 
 
 **响应状态**:
@@ -1223,13 +1617,13 @@
 **响应状态**:
 
 
-| 状态码 | 说明         | schema   |
-| ------ | ------------ | -------- |
-| 200    | OK           | Position |
-| 201    | Created      |          |
-| 401    | Unauthorized |          |
-| 403    | Forbidden    |          |
-| 404    | Not Found    |          |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 职位表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
@@ -1237,9 +1631,9 @@
 
 | 参数名称            | 参数说明 | 类型           | schema         |
 | ------------------- | -------- | -------------- | -------------- |
-| descriptionPosition |          | string         |                |
-| position            |          | string         |                |
-| positionid          |          | integer(int32) | integer(int32) |
+| descriptionPosition | 职位描述 | string         |                |
+| position            | 职位名称 | string         |                |
+| positionid          | 自增ID   | integer(int32) | integer(int32) |
 
 
 **响应示例**:
@@ -1287,24 +1681,24 @@
 **请求参数**:
 
 
-| 参数名称                        | 参数说明 | in   | 是否必须 | 数据类型       | schema   |
-| ------------------------------- | -------- | ---- | -------- | -------------- | -------- |
-| position                        | position | body | true     | Position       | Position |
-| &emsp;&emsp;descriptionPosition |          |      | false    | string         |          |
-| &emsp;&emsp;position            |          |      | false    | string         |          |
-| &emsp;&emsp;positionid          |          |      | false    | integer(int32) |          |
+| 参数名称                        | 参数说明 | in   | 是否必须 | 数据类型       | schema       |
+| ------------------------------- | -------- | ---- | -------- | -------------- | ------------ |
+| position                        | position | body | true     | 职位表实体类   | 职位表实体类 |
+| &emsp;&emsp;descriptionPosition | 职位描述 |      | false    | string         |              |
+| &emsp;&emsp;position            | 职位名称 |      | false    | string         |              |
+| &emsp;&emsp;positionid          | 自增ID   |      | false    | integer(int32) |              |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema   |
-| ------ | ------------ | -------- |
-| 200    | OK           | Position |
-| 201    | Created      |          |
-| 401    | Unauthorized |          |
-| 403    | Forbidden    |          |
-| 404    | Not Found    |          |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 职位表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
@@ -1312,9 +1706,9 @@
 
 | 参数名称            | 参数说明 | 类型           | schema         |
 | ------------------- | -------- | -------------- | -------------- |
-| descriptionPosition |          | string         |                |
-| position            |          | string         |                |
-| positionid          |          | integer(int32) | integer(int32) |
+| descriptionPosition | 职位描述 | string         |                |
+| position            | 职位名称 | string         |                |
+| positionid          | 自增ID   | integer(int32) | integer(int32) |
 
 
 **响应示例**:
@@ -1360,24 +1754,24 @@
 **请求参数**:
 
 
-| 参数名称                        | 参数说明 | in   | 是否必须 | 数据类型       | schema   |
-| ------------------------------- | -------- | ---- | -------- | -------------- | -------- |
-| position                        | position | body | true     | Position       | Position |
-| &emsp;&emsp;descriptionPosition |          |      | false    | string         |          |
-| &emsp;&emsp;position            |          |      | false    | string         |          |
-| &emsp;&emsp;positionid          |          |      | false    | integer(int32) |          |
+| 参数名称                        | 参数说明 | in   | 是否必须 | 数据类型       | schema       |
+| ------------------------------- | -------- | ---- | -------- | -------------- | ------------ |
+| position                        | position | body | true     | 职位表实体类   | 职位表实体类 |
+| &emsp;&emsp;descriptionPosition | 职位描述 |      | false    | string         |              |
+| &emsp;&emsp;position            | 职位名称 |      | false    | string         |              |
+| &emsp;&emsp;positionid          | 自增ID   |      | false    | integer(int32) |              |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema   |
-| ------ | ------------ | -------- |
-| 200    | OK           | Position |
-| 201    | Created      |          |
-| 401    | Unauthorized |          |
-| 403    | Forbidden    |          |
-| 404    | Not Found    |          |
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 职位表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
 
 
 **响应参数**:
@@ -1385,9 +1779,9 @@
 
 | 参数名称            | 参数说明 | 类型           | schema         |
 | ------------------- | -------- | -------------- | -------------- |
-| descriptionPosition |          | string         |                |
-| position            |          | string         |                |
-| positionid          |          | integer(int32) | integer(int32) |
+| descriptionPosition | 职位描述 | string         |                |
+| position            | 职位名称 | string         |                |
+| positionid          | 自增ID   | integer(int32) | integer(int32) |
 
 
 **响应示例**:
@@ -1398,6 +1792,384 @@
 	"positionid": 0
 }
 ```
+
+
+# 抽象财务数据管理
+
+
+## 添加抽象财务数据
+
+
+**接口地址**:`/abstractFinancialData/addOne`
+
+
+**请求方式**:`POST`
+
+
+**请求数据类型**:`application/json`
+
+
+**响应数据类型**:`application/json;charset=UTF-8`
+
+
+**接口描述**:
+
+
+**请求示例**:
+
+
+```javascript
+{
+	"id": 0,
+	"livestoSpecies": "",
+	"number": 0,
+	"numberOfChanges": 0,
+	"why": ""
+}
+```
+
+
+**请求参数**:
+
+
+| 参数名称                    | 参数说明              | in   | 是否必须 | 数据类型           | schema             |
+| --------------------------- | --------------------- | ---- | -------- | ------------------ | ------------------ |
+| abstractFinancialData       | abstractFinancialData | body | true     | 抽象财务数据实体类 | 抽象财务数据实体类 |
+| &emsp;&emsp;id              | 自增ID                |      | false    | integer(int32)     |                    |
+| &emsp;&emsp;livestoSpecies  | 牲畜种类              |      | false    | string             |                    |
+| &emsp;&emsp;number          | 总值                  |      | false    | integer(int32)     |                    |
+| &emsp;&emsp;numberOfChanges | 变动数量              |      | false    | integer(int32)     |                    |
+| &emsp;&emsp;why             | 变动原因              |      | false    | string             |                    |
+
+
+**响应状态**:
+
+
+| 状态码 | 说明         | schema             |
+| ------ | ------------ | ------------------ |
+| 200    | OK           | 抽象财务数据实体类 |
+| 201    | Created      |                    |
+| 401    | Unauthorized |                    |
+| 403    | Forbidden    |                    |
+| 404    | Not Found    |                    |
+
+
+**响应参数**:
+
+
+| 参数名称        | 参数说明 | 类型           | schema         |
+| --------------- | -------- | -------------- | -------------- |
+| id              | 自增ID   | integer(int32) | integer(int32) |
+| livestoSpecies  | 牲畜种类 | string         |                |
+| number          | 总值     | integer(int32) | integer(int32) |
+| numberOfChanges | 变动数量 | integer(int32) | integer(int32) |
+| why             | 变动原因 | string         |                |
+
+
+**响应示例**:
+```javascript
+{
+	"id": 0,
+	"livestoSpecies": "",
+	"number": 0,
+	"numberOfChanges": 0,
+	"why": ""
+}
+```
+
+
+## 通过ID删除抽象财务数据
+
+
+**接口地址**:`/abstractFinancialData/deleteOne`
+
+
+**请求方式**:`POST`
+
+
+**请求数据类型**:`application/json`
+
+
+**响应数据类型**:`application/json;charset=UTF-8`
+
+
+**接口描述**:
+
+
+**请求示例**:
+
+
+```javascript
+{
+	"id": 0,
+	"livestoSpecies": "",
+	"number": 0,
+	"numberOfChanges": 0,
+	"why": ""
+}
+```
+
+
+**请求参数**:
+
+
+| 参数名称                    | 参数说明              | in   | 是否必须 | 数据类型           | schema             |
+| --------------------------- | --------------------- | ---- | -------- | ------------------ | ------------------ |
+| abstractFinancialData       | abstractFinancialData | body | true     | 抽象财务数据实体类 | 抽象财务数据实体类 |
+| &emsp;&emsp;id              | 自增ID                |      | false    | integer(int32)     |                    |
+| &emsp;&emsp;livestoSpecies  | 牲畜种类              |      | false    | string             |                    |
+| &emsp;&emsp;number          | 总值                  |      | false    | integer(int32)     |                    |
+| &emsp;&emsp;numberOfChanges | 变动数量              |      | false    | integer(int32)     |                    |
+| &emsp;&emsp;why             | 变动原因              |      | false    | string             |                    |
+
+
+**响应状态**:
+
+
+| 状态码 | 说明         | schema |
+| ------ | ------------ | ------ |
+| 200    | OK           |        |
+| 201    | Created      |        |
+| 401    | Unauthorized |        |
+| 403    | Forbidden    |        |
+| 404    | Not Found    |        |
+
+
+**响应参数**:
+
+
+暂无
+
+
+**响应示例**:
+```javascript
+
+```
+
+
+## 查询全部抽象财务数据
+
+
+**接口地址**:`/abstractFinancialData/queryAll`
+
+
+**请求方式**:`POST`
+
+
+**请求数据类型**:`application/json`
+
+
+**响应数据类型**:`application/json;charset=UTF-8`
+
+
+**接口描述**:
+
+
+**请求参数**:
+
+
+暂无
+
+
+**响应状态**:
+
+
+| 状态码 | 说明         | schema             |
+| ------ | ------------ | ------------------ |
+| 200    | OK           | 抽象财务数据实体类 |
+| 201    | Created      |                    |
+| 401    | Unauthorized |                    |
+| 403    | Forbidden    |                    |
+| 404    | Not Found    |                    |
+
+
+**响应参数**:
+
+
+| 参数名称        | 参数说明 | 类型           | schema         |
+| --------------- | -------- | -------------- | -------------- |
+| id              | 自增ID   | integer(int32) | integer(int32) |
+| livestoSpecies  | 牲畜种类 | string         |                |
+| number          | 总值     | integer(int32) | integer(int32) |
+| numberOfChanges | 变动数量 | integer(int32) | integer(int32) |
+| why             | 变动原因 | string         |                |
+
+
+**响应示例**:
+```javascript
+[
+	{
+		"id": 0,
+		"livestoSpecies": "",
+		"number": 0,
+		"numberOfChanges": 0,
+		"why": ""
+	}
+]
+```
+
+
+## 通过ID查询抽象财务数据
+
+
+**接口地址**:`/abstractFinancialData/selectOne`
+
+
+**请求方式**:`POST`
+
+
+**请求数据类型**:`application/json`
+
+
+**响应数据类型**:`application/json;charset=UTF-8`
+
+
+**接口描述**:
+
+
+**请求示例**:
+
+
+```javascript
+{
+	"id": 0,
+	"livestoSpecies": "",
+	"number": 0,
+	"numberOfChanges": 0,
+	"why": ""
+}
+```
+
+
+**请求参数**:
+
+
+| 参数名称                    | 参数说明              | in   | 是否必须 | 数据类型           | schema             |
+| --------------------------- | --------------------- | ---- | -------- | ------------------ | ------------------ |
+| abstractFinancialData       | abstractFinancialData | body | true     | 抽象财务数据实体类 | 抽象财务数据实体类 |
+| &emsp;&emsp;id              | 自增ID                |      | false    | integer(int32)     |                    |
+| &emsp;&emsp;livestoSpecies  | 牲畜种类              |      | false    | string             |                    |
+| &emsp;&emsp;number          | 总值                  |      | false    | integer(int32)     |                    |
+| &emsp;&emsp;numberOfChanges | 变动数量              |      | false    | integer(int32)     |                    |
+| &emsp;&emsp;why             | 变动原因              |      | false    | string             |                    |
+
+
+**响应状态**:
+
+
+| 状态码 | 说明         | schema             |
+| ------ | ------------ | ------------------ |
+| 200    | OK           | 抽象财务数据实体类 |
+| 201    | Created      |                    |
+| 401    | Unauthorized |                    |
+| 403    | Forbidden    |                    |
+| 404    | Not Found    |                    |
+
+
+**响应参数**:
+
+
+| 参数名称        | 参数说明 | 类型           | schema         |
+| --------------- | -------- | -------------- | -------------- |
+| id              | 自增ID   | integer(int32) | integer(int32) |
+| livestoSpecies  | 牲畜种类 | string         |                |
+| number          | 总值     | integer(int32) | integer(int32) |
+| numberOfChanges | 变动数量 | integer(int32) | integer(int32) |
+| why             | 变动原因 | string         |                |
+
+
+**响应示例**:
+```javascript
+{
+	"id": 0,
+	"livestoSpecies": "",
+	"number": 0,
+	"numberOfChanges": 0,
+	"why": ""
+}
+```
+
+
+## 更新抽象财务数据
+
+
+**接口地址**:`/abstractFinancialData/updateOne`
+
+
+**请求方式**:`POST`
+
+
+**请求数据类型**:`application/json`
+
+
+**响应数据类型**:`application/json;charset=UTF-8`
+
+
+**接口描述**:
+
+
+**请求示例**:
+
+
+```javascript
+{
+	"id": 0,
+	"livestoSpecies": "",
+	"number": 0,
+	"numberOfChanges": 0,
+	"why": ""
+}
+```
+
+
+**请求参数**:
+
+
+| 参数名称                    | 参数说明              | in   | 是否必须 | 数据类型           | schema             |
+| --------------------------- | --------------------- | ---- | -------- | ------------------ | ------------------ |
+| abstractFinancialData       | abstractFinancialData | body | true     | 抽象财务数据实体类 | 抽象财务数据实体类 |
+| &emsp;&emsp;id              | 自增ID                |      | false    | integer(int32)     |                    |
+| &emsp;&emsp;livestoSpecies  | 牲畜种类              |      | false    | string             |                    |
+| &emsp;&emsp;number          | 总值                  |      | false    | integer(int32)     |                    |
+| &emsp;&emsp;numberOfChanges | 变动数量              |      | false    | integer(int32)     |                    |
+| &emsp;&emsp;why             | 变动原因              |      | false    | string             |                    |
+
+
+**响应状态**:
+
+
+| 状态码 | 说明         | schema             |
+| ------ | ------------ | ------------------ |
+| 200    | OK           | 抽象财务数据实体类 |
+| 201    | Created      |                    |
+| 401    | Unauthorized |                    |
+| 403    | Forbidden    |                    |
+| 404    | Not Found    |                    |
+
+
+**响应参数**:
+
+
+| 参数名称        | 参数说明 | 类型           | schema         |
+| --------------- | -------- | -------------- | -------------- |
+| id              | 自增ID   | integer(int32) | integer(int32) |
+| livestoSpecies  | 牲畜种类 | string         |                |
+| number          | 总值     | integer(int32) | integer(int32) |
+| numberOfChanges | 变动数量 | integer(int32) | integer(int32) |
+| why             | 变动原因 | string         |                |
+
+
+**响应示例**:
+```javascript
+{
+	"id": 0,
+	"livestoSpecies": "",
+	"number": 0,
+	"numberOfChanges": 0,
+	"why": ""
+}
+```
+
 
 # 财务数据管理
 
@@ -1437,26 +2209,26 @@
 **请求参数**:
 
 
-| 参数名称                             | 参数说明 | in   | 是否必须 | 数据类型       | schema  |
-| ------------------------------------ | -------- | ---- | -------- | -------------- | ------- |
-| finance                              | finance  | body | true     | Finance        | Finance |
-| &emsp;&emsp;id                       |          |      | false    | integer(int32) |         |
-| &emsp;&emsp;incomeAndExpenditureType |          |      | false    | integer(int32) |         |
-| &emsp;&emsp;note                     |          |      | false    | string         |         |
-| &emsp;&emsp;number                   |          |      | false    | number(double) |         |
-| &emsp;&emsp;why                      |          |      | false    | string         |         |
+| 参数名称                             | 参数说明 | in   | 是否必须 | 数据类型         | schema           |
+| ------------------------------------ | -------- | ---- | -------- | ---------------- | ---------------- |
+| finance                              | finance  | body | true     | 财务数据表实体类 | 财务数据表实体类 |
+| &emsp;&emsp;id                       | 自增ID   |      | false    | integer(int32)   |                  |
+| &emsp;&emsp;incomeAndExpenditureType | 收入支出 |      | false    | integer(int32)   |                  |
+| &emsp;&emsp;note                     | 备注     |      | false    | string           |                  |
+| &emsp;&emsp;number                   | 数额     |      | false    | number(double)   |                  |
+| &emsp;&emsp;why                      | 缘由     |      | false    | string           |                  |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema  |
-| ------ | ------------ | ------- |
-| 200    | OK           | Finance |
-| 201    | Created      |         |
-| 401    | Unauthorized |         |
-| 403    | Forbidden    |         |
-| 404    | Not Found    |         |
+| 状态码 | 说明         | schema           |
+| ------ | ------------ | ---------------- |
+| 200    | OK           | 财务数据表实体类 |
+| 201    | Created      |                  |
+| 401    | Unauthorized |                  |
+| 403    | Forbidden    |                  |
+| 404    | Not Found    |                  |
 
 
 **响应参数**:
@@ -1464,11 +2236,11 @@
 
 | 参数名称                 | 参数说明 | 类型           | schema         |
 | ------------------------ | -------- | -------------- | -------------- |
-| id                       |          | integer(int32) | integer(int32) |
-| incomeAndExpenditureType |          | integer(int32) | integer(int32) |
-| note                     |          | string         |                |
-| number                   |          | number(double) | number(double) |
-| why                      |          | string         |                |
+| id                       | 自增ID   | integer(int32) | integer(int32) |
+| incomeAndExpenditureType | 收入支出 | integer(int32) | integer(int32) |
+| note                     | 备注     | string         |                |
+| number                   | 数额     | number(double) | number(double) |
+| why                      | 缘由     | string         |                |
 
 
 **响应示例**:
@@ -1518,14 +2290,14 @@
 **请求参数**:
 
 
-| 参数名称                             | 参数说明 | in   | 是否必须 | 数据类型       | schema  |
-| ------------------------------------ | -------- | ---- | -------- | -------------- | ------- |
-| finance                              | finance  | body | true     | Finance        | Finance |
-| &emsp;&emsp;id                       |          |      | false    | integer(int32) |         |
-| &emsp;&emsp;incomeAndExpenditureType |          |      | false    | integer(int32) |         |
-| &emsp;&emsp;note                     |          |      | false    | string         |         |
-| &emsp;&emsp;number                   |          |      | false    | number(double) |         |
-| &emsp;&emsp;why                      |          |      | false    | string         |         |
+| 参数名称                             | 参数说明 | in   | 是否必须 | 数据类型         | schema           |
+| ------------------------------------ | -------- | ---- | -------- | ---------------- | ---------------- |
+| finance                              | finance  | body | true     | 财务数据表实体类 | 财务数据表实体类 |
+| &emsp;&emsp;id                       | 自增ID   |      | false    | integer(int32)   |                  |
+| &emsp;&emsp;incomeAndExpenditureType | 收入支出 |      | false    | integer(int32)   |                  |
+| &emsp;&emsp;note                     | 备注     |      | false    | string           |                  |
+| &emsp;&emsp;number                   | 数额     |      | false    | number(double)   |                  |
+| &emsp;&emsp;why                      | 缘由     |      | false    | string           |                  |
 
 
 **响应状态**:
@@ -1579,13 +2351,13 @@
 **响应状态**:
 
 
-| 状态码 | 说明         | schema  |
-| ------ | ------------ | ------- |
-| 200    | OK           | Finance |
-| 201    | Created      |         |
-| 401    | Unauthorized |         |
-| 403    | Forbidden    |         |
-| 404    | Not Found    |         |
+| 状态码 | 说明         | schema           |
+| ------ | ------------ | ---------------- |
+| 200    | OK           | 财务数据表实体类 |
+| 201    | Created      |                  |
+| 401    | Unauthorized |                  |
+| 403    | Forbidden    |                  |
+| 404    | Not Found    |                  |
 
 
 **响应参数**:
@@ -1593,11 +2365,11 @@
 
 | 参数名称                 | 参数说明 | 类型           | schema         |
 | ------------------------ | -------- | -------------- | -------------- |
-| id                       |          | integer(int32) | integer(int32) |
-| incomeAndExpenditureType |          | integer(int32) | integer(int32) |
-| note                     |          | string         |                |
-| number                   |          | number(double) | number(double) |
-| why                      |          | string         |                |
+| id                       | 自增ID   | integer(int32) | integer(int32) |
+| incomeAndExpenditureType | 收入支出 | integer(int32) | integer(int32) |
+| note                     | 备注     | string         |                |
+| number                   | 数额     | number(double) | number(double) |
+| why                      | 缘由     | string         |                |
 
 
 **响应示例**:
@@ -1649,26 +2421,26 @@
 **请求参数**:
 
 
-| 参数名称                             | 参数说明 | in   | 是否必须 | 数据类型       | schema  |
-| ------------------------------------ | -------- | ---- | -------- | -------------- | ------- |
-| finance                              | finance  | body | true     | Finance        | Finance |
-| &emsp;&emsp;id                       |          |      | false    | integer(int32) |         |
-| &emsp;&emsp;incomeAndExpenditureType |          |      | false    | integer(int32) |         |
-| &emsp;&emsp;note                     |          |      | false    | string         |         |
-| &emsp;&emsp;number                   |          |      | false    | number(double) |         |
-| &emsp;&emsp;why                      |          |      | false    | string         |         |
+| 参数名称                             | 参数说明 | in   | 是否必须 | 数据类型         | schema           |
+| ------------------------------------ | -------- | ---- | -------- | ---------------- | ---------------- |
+| finance                              | finance  | body | true     | 财务数据表实体类 | 财务数据表实体类 |
+| &emsp;&emsp;id                       | 自增ID   |      | false    | integer(int32)   |                  |
+| &emsp;&emsp;incomeAndExpenditureType | 收入支出 |      | false    | integer(int32)   |                  |
+| &emsp;&emsp;note                     | 备注     |      | false    | string           |                  |
+| &emsp;&emsp;number                   | 数额     |      | false    | number(double)   |                  |
+| &emsp;&emsp;why                      | 缘由     |      | false    | string           |                  |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema  |
-| ------ | ------------ | ------- |
-| 200    | OK           | Finance |
-| 201    | Created      |         |
-| 401    | Unauthorized |         |
-| 403    | Forbidden    |         |
-| 404    | Not Found    |         |
+| 状态码 | 说明         | schema           |
+| ------ | ------------ | ---------------- |
+| 200    | OK           | 财务数据表实体类 |
+| 201    | Created      |                  |
+| 401    | Unauthorized |                  |
+| 403    | Forbidden    |                  |
+| 404    | Not Found    |                  |
 
 
 **响应参数**:
@@ -1676,11 +2448,11 @@
 
 | 参数名称                 | 参数说明 | 类型           | schema         |
 | ------------------------ | -------- | -------------- | -------------- |
-| id                       |          | integer(int32) | integer(int32) |
-| incomeAndExpenditureType |          | integer(int32) | integer(int32) |
-| note                     |          | string         |                |
-| number                   |          | number(double) | number(double) |
-| why                      |          | string         |                |
+| id                       | 自增ID   | integer(int32) | integer(int32) |
+| incomeAndExpenditureType | 收入支出 | integer(int32) | integer(int32) |
+| note                     | 备注     | string         |                |
+| number                   | 数额     | number(double) | number(double) |
+| why                      | 缘由     | string         |                |
 
 
 **响应示例**:
@@ -1730,26 +2502,26 @@
 **请求参数**:
 
 
-| 参数名称                             | 参数说明 | in   | 是否必须 | 数据类型       | schema  |
-| ------------------------------------ | -------- | ---- | -------- | -------------- | ------- |
-| finance                              | finance  | body | true     | Finance        | Finance |
-| &emsp;&emsp;id                       |          |      | false    | integer(int32) |         |
-| &emsp;&emsp;incomeAndExpenditureType |          |      | false    | integer(int32) |         |
-| &emsp;&emsp;note                     |          |      | false    | string         |         |
-| &emsp;&emsp;number                   |          |      | false    | number(double) |         |
-| &emsp;&emsp;why                      |          |      | false    | string         |         |
+| 参数名称                             | 参数说明 | in   | 是否必须 | 数据类型         | schema           |
+| ------------------------------------ | -------- | ---- | -------- | ---------------- | ---------------- |
+| finance                              | finance  | body | true     | 财务数据表实体类 | 财务数据表实体类 |
+| &emsp;&emsp;id                       | 自增ID   |      | false    | integer(int32)   |                  |
+| &emsp;&emsp;incomeAndExpenditureType | 收入支出 |      | false    | integer(int32)   |                  |
+| &emsp;&emsp;note                     | 备注     |      | false    | string           |                  |
+| &emsp;&emsp;number                   | 数额     |      | false    | number(double)   |                  |
+| &emsp;&emsp;why                      | 缘由     |      | false    | string           |                  |
 
 
 **响应状态**:
 
 
-| 状态码 | 说明         | schema  |
-| ------ | ------------ | ------- |
-| 200    | OK           | Finance |
-| 201    | Created      |         |
-| 401    | Unauthorized |         |
-| 403    | Forbidden    |         |
-| 404    | Not Found    |         |
+| 状态码 | 说明         | schema           |
+| ------ | ------------ | ---------------- |
+| 200    | OK           | 财务数据表实体类 |
+| 201    | Created      |                  |
+| 401    | Unauthorized |                  |
+| 403    | Forbidden    |                  |
+| 404    | Not Found    |                  |
 
 
 **响应参数**:
@@ -1757,11 +2529,11 @@
 
 | 参数名称                 | 参数说明 | 类型           | schema         |
 | ------------------------ | -------- | -------------- | -------------- |
-| id                       |          | integer(int32) | integer(int32) |
-| incomeAndExpenditureType |          | integer(int32) | integer(int32) |
-| note                     |          | string         |                |
-| number                   |          | number(double) | number(double) |
-| why                      |          | string         |                |
+| id                       | 自增ID   | integer(int32) | integer(int32) |
+| incomeAndExpenditureType | 收入支出 | integer(int32) | integer(int32) |
+| note                     | 备注     | string         |                |
+| number                   | 数额     | number(double) | number(double) |
+| why                      | 缘由     | string         |                |
 
 
 **响应示例**:
@@ -1773,4 +2545,152 @@
 	"number": 0,
 	"why": ""
 }
+```
+
+
+# Redis管理
+
+
+## TestRedisGet
+
+
+**接口地址**:`/TestRedis/TestRedisGet`
+
+
+**请求方式**:`POST`
+
+
+**请求数据类型**:`application/json`
+
+
+**响应数据类型**:`application/json;charset=UTF-8`
+
+
+**接口描述**:
+
+
+**请求参数**:
+
+
+暂无
+
+
+**响应状态**:
+
+
+| 状态码 | 说明         | schema       |
+| ------ | ------------ | ------------ |
+| 200    | OK           | 员工表实体类 |
+| 201    | Created      |              |
+| 401    | Unauthorized |              |
+| 403    | Forbidden    |              |
+| 404    | Not Found    |              |
+
+
+**响应参数**:
+
+
+| 参数名称       | 参数说明   | 类型              | schema            |
+| -------------- | ---------- | ----------------- | ----------------- |
+| entryDate      | 入职日期   | string(date-time) | string(date-time) |
+| id             | 自增ID     | integer(int32)    | integer(int32)    |
+| idCardNumber   | 身份证号码 | string            |                   |
+| isSeparation   | 是否离职   | integer(int32)    | integer(int32)    |
+| name           | 姓名       | string            |                   |
+| phoneNumber    | 联系方式   | string            |                   |
+| positionId     | 职位       | integer(int32)    | integer(int32)    |
+| separationDate | 离职日期   | string(date-time) | string(date-time) |
+| wage           | 工资       | number(double)    | number(double)    |
+
+
+**响应示例**:
+```javascript
+{
+	"entryDate": "",
+	"id": 0,
+	"idCardNumber": "",
+	"isSeparation": 0,
+	"name": "",
+	"phoneNumber": "",
+	"positionId": 0,
+	"separationDate": "",
+	"wage": 0
+}
+```
+
+
+## TestRedisSet
+
+
+**接口地址**:`/TestRedis/TestRedisSet`
+
+
+**请求方式**:`POST`
+
+
+**请求数据类型**:`application/json`
+
+
+**响应数据类型**:`application/json;charset=UTF-8`
+
+
+**接口描述**:
+
+
+**请求示例**:
+
+
+```javascript
+{
+	"entryDate": "",
+	"id": 0,
+	"idCardNumber": "",
+	"isSeparation": 0,
+	"name": "",
+	"phoneNumber": "",
+	"positionId": 0,
+	"separationDate": "",
+	"wage": 0
+}
+```
+
+
+**请求参数**:
+
+
+| 参数名称                   | 参数说明   | in   | 是否必须 | 数据类型          | schema       |
+| -------------------------- | ---------- | ---- | -------- | ----------------- | ------------ |
+| staff                      | staff      | body | true     | 员工表实体类      | 员工表实体类 |
+| &emsp;&emsp;entryDate      | 入职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;id             | 自增ID     |      | false    | integer(int32)    |              |
+| &emsp;&emsp;idCardNumber   | 身份证号码 |      | false    | string            |              |
+| &emsp;&emsp;isSeparation   | 是否离职   |      | false    | integer(int32)    |              |
+| &emsp;&emsp;name           | 姓名       |      | false    | string            |              |
+| &emsp;&emsp;phoneNumber    | 联系方式   |      | false    | string            |              |
+| &emsp;&emsp;positionId     | 职位       |      | false    | integer(int32)    |              |
+| &emsp;&emsp;separationDate | 离职日期   |      | false    | string(date-time) |              |
+| &emsp;&emsp;wage           | 工资       |      | false    | number(double)    |              |
+
+
+**响应状态**:
+
+
+| 状态码 | 说明         | schema |
+| ------ | ------------ | ------ |
+| 200    | OK           |        |
+| 201    | Created      |        |
+| 401    | Unauthorized |        |
+| 403    | Forbidden    |        |
+| 404    | Not Found    |        |
+
+
+**响应参数**:
+
+
+暂无
+
+
+**响应示例**:
+```javascript
+
 ```
